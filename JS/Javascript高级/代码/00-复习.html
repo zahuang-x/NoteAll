@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>复习</title>
+</head>
+<body>
+<script type="text/javascript">
+	// 能够简单了解 JS 面向对象的设计理念 
+	// 能够理解构造函数的作用
+	// 能够了解原型及原型链的基本概念
+	// 能够掌握prototype属性的作用
+	// 能够掌握constructor 属性的作用
+	// 能够了解继承的基本概念
+	// 
+	// var obj = {
+	// 	"age":30,
+	// 	"say":function(){
+
+	// 	}
+	// };
+	// obj.age;
+	// obj.say();
+	// 
+	function Person(){
+		// var obj = {};
+		// this = obj;
+		this.age = 30;
+		//return this;
+	}
+	var obj = new Person();
+	console.log( obj.age );
+	console.log(Person.prototype);
+	console.log(Person.prototype.constructor);// 查找对象的构造函数
+	console.log(obj.constructor);// 查找对象的构造函数
+
+	console.log( obj.constructor == Person );
+</script>
+</body>
+</html>

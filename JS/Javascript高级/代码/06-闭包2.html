@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>闭包</title>
+</head>
+<body>
+<script type="text/javascript">
+	//1.闭包能够使 函数外部使用函数内部的变量（对外部函数来说）
+	//2.闭包能够是 函数内部的变量，常驻内存（数据始终保存在内存中，不会被销毁）
+	// function fn(){
+	// 	var num = 100;
+	// 	console.log(num);
+	// 	num++;
+	// }
+	// fn();//100
+	// fn();//100
+	//闭包缺点：由于内部数据不会被自动销毁，占用内存。所以一般不要使用太多闭包
+	function f1(){
+		var num = 100;
+		return function(){
+			console.log(num);
+			num++;
+		};
+	}
+	var res = f1(); // res就是返回的那个函数
+	res(); // 100  num = 101
+	res(); // 101  num = 102
+	res(); // 102  num = 103
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>作用域</title>
+</head>
+<body>
+<script type="text/javascript">
+	//局部变量  函数内部var声明的变量，函数外部不能使用
+	// function fn(){
+	// 	var a = 100;
+	// 	console.log(a);
+	// }
+	// fn()
+	// console.log(a);
+
+	//全局变量  函数外面声明的变量，函数内部可以使用
+	// var b = 200;
+	// function f1(){
+	// 	console.log(b);
+	// }
+	// f1();
+	// console.log(b);
+
+	//作用域链
+	var c = 100;
+	function f2(){
+		// var c = 200;
+		function f3(){
+			// var c = 300;
+			console.log(c);
+		}
+		f3();
+	}
+	f2();
+</script>
+</body>
+</html>

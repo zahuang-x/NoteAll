@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>arguments</title>
+</head>
+<body>
+<script type="text/javascript">
+	//定义函数
+	/*function f(m,n){
+		return m + n;
+	}
+	console.log( f(1,2) );*/
+	//函数的参数  实参和形参 个数可以不一致
+	//
+	//封装一个函数，计算所有实参的和
+	function fn(){
+		//arguments对象（类数组的对象）: 用来获取所有的实参
+		// console.log(arguments);
+		// console.log(arguments[0]);
+		// console.log(arguments[1]);
+		// console.log(arguments.length);
+		var sum = 0;
+		for(var i=0; i<arguments.length; i++){
+			//arguments[i] 是一个实参
+			sum += arguments[i];
+		}
+		return sum;
+	}
+	console.log( fn(1) );
+	console.log( fn(1,2) );
+	console.log( fn(3, 4, 5) );
+</script>
+</body>
+</html>

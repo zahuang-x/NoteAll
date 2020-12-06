@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>函数进阶</title>
+</head>
+<body>
+<script type="text/javascript">
+	//函数定义方式
+	//function 关键字
+	function f1(){
+		console.log(100);
+	}
+	f1();
+	//表达式方式
+	var f2 = function(){
+		console.log(200);
+	};
+	f2();
+	//匿名函数自调用
+	(function(){
+		console.log(300);
+	})();
+
+	//函数本身也是对象，也有一个构造函数 Function
+	// var f4 = new Function('m','n','console.log(200)');
+	// console.log(f4);
+	// f4();
+	
+	//函数参数和返回值
+	function fn(m,n){
+		// console.log(10);
+		// return;
+		return m+n;
+	}
+	var res = fn(1,2);
+
+	//函数预加载效果（变量提升效果）
+	//
+	console.log(a);
+	var a = 100;
+
+	// var a;
+	// console.log(a);//undefined
+	// a = 100;
+	// 
+	f5();
+	function f5(){
+		console.log(b);//undefined
+		var b = 200;
+	}
+</script>
+</body>
+</html>
